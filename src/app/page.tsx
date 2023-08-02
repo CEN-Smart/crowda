@@ -15,7 +15,7 @@ export default function HomePage() {
       />
 
       <Container className='bg-black pb-16'>
-        <Image className=' rounded-lg opacity-50 object-cover' src={heroImg} width={1920} height={1080} alt='Hero Image'
+        <Image className='rounded-lg object-cover' src={heroImg} width={1920} height={1080} alt='Hero Image'
           priority
           blurDataURL='data:image/svg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhQJ/6t8QOwAAAABJRU5ErkJggg=='
           placeholder='blur'

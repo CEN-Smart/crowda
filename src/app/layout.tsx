@@ -21,9 +21,7 @@ export default function RootLayout({ children }: Props) {
       <body className={`${inter.className} antialiased`}>
         <Providers>
           <Navbar />
-          <div>
-            {children}
-          </div>
+          {children}
         </Providers>
       </body>
     </html>

@@ -1,3 +1,4 @@
+'use client'
 import { Button } from '@chakra-ui/react';
 import { IconType } from 'react-icons';
 
