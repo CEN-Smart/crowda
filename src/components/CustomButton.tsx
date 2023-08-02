@@ -23,11 +23,17 @@ export default function CustomButton({ title, bgColor, border, textColor, big, i
         colorScheme={colorScheme ? colorScheme : ''}
         bg={bgColor}
         size={big ? 'lg' : 'md'}
-        px={big ? '16' : '4'}
-        py={big ? '8' : '5'}
+        px={{
+          base: big ? '8' : '4',
+          lg: big ? '14' : '6'
+        }}
+        py={{
+          base: big ? '8' : '4',
+          lg: big ? '12' : '6'
+        }}
         borderRadius={big ? 'full' : 'md'}
         className={`${className} ${shadow && 'drop-shadow-2xl'} transition duration-200 active:transform active:scale-95 active:shadow-none`}
-        rightIcon={Icon && <Icon size={20} />}
+        rightIcon={Icon && (<Icon size={20} />)}
       >
         {title}
       </Button>

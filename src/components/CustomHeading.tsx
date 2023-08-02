@@ -10,16 +10,30 @@ interface Props {
   secondaryHeading?: string,
   description: string,
   leftButton: string,
-  rightButton: string
-  className?: string
+  rightButton: string,
+  className?: string,
+  colorScheme?: string,
+  border?: string,
+  bgColor?: string,
+  textColor?: string,
+  shadow?: boolean,
+  leftBtnClassName?: string,
+  rightBtnClassName?: string,
+  leftColorScheme?: string,
+  rightColorScheme?: string,
+  leftBtnTextColor?: string,
+  rightBtnTextColor?: string
+  leftBtnBgColor?: string,
+  rightBtnBgColor?: string,
+
 }
 
-export default function CustomHeading({ primaryHeading, secondaryHeading, description, leftButton, rightButton, className }: Props) {
+export default function CustomHeading({ primaryHeading, secondaryHeading, description, leftButton, rightButton, leftBtnClassName, rightBtnClassName, leftColorScheme, rightColorScheme, leftBtnTextColor, rightBtnTextColor, leftBtnBgColor, rightBtnBgColor, className }: Props) {
   return (
     <>
-      <Container className={classNames(` pt-28 text-center bg-black text-white pb-10 ${className}`)}>
+      <Container className={classNames(` text-center pb-10 ${className}`)}>
         <Stack spacing={6}>
-          {secondaryHeading && <Text className='text-center text-2xl font-bold'>{secondaryHeading}</Text>}
+          {secondaryHeading && <Text className='text-center text-xl text-slate-800 font-bold'>{secondaryHeading}</Text>}
           <Heading fontSize={{
             base: '2xl',
             md: '3xl',
@@ -45,8 +59,10 @@ export default function CustomHeading({ primaryHeading, secondaryHeading, descri
             base: 'full',
             md: 'auto'
           }} className='mx-auto'>
-            <CustomButton className=' hover:font-semibold' colorScheme='yellow' title={leftButton} shadow textColor='black' />
-            <CustomButton className='hover:bg-slate-950 hover:font-semibold' title={rightButton} colorScheme='black' shadow textColor='white' border />
+            {/* Left Button */}
+            <CustomButton className={leftBtnClassName} colorScheme={leftColorScheme} title={leftButton} shadow textColor={leftBtnTextColor} border bgColor={leftBtnBgColor} />
+            {/* Right Button */}
+            <CustomButton className={rightBtnClassName} colorScheme={rightColorScheme} title={rightButton} shadow bgColor={rightBtnBgColor} textColor={rightBtnTextColor} border />
           </ButtonGroup>
         </Stack>
       </Container>
