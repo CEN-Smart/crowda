@@ -6,10 +6,10 @@ import Container from './Container'
 interface Props {
   [key: string]: string
 }
-const GridContent = ({ mainH, mainT, priH, priT, secH, secT, terH, terT }: Props) => {
+const GridContent = ({ mainH, mainT, priH, priT, secH, secT, terH, terT, className }: Props) => {
   return (
     <>
-      <Container className='text-black py-16'>
+      <Container className={className}>
         <Grid gridTemplateColumns={{
           base: 'repeat(1, 1fr)',
           md: 'repeat(2, 1fr)',

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import logo from '../../public/UP.svg'
 import { useRouter } from 'next/navigation'
+import { useCallback } from 'react'
 
 interface LogoProps {
   onClose?: () => void
@@ -10,10 +11,11 @@ interface LogoProps {
 }
 const Logo = ({ onClose, className }: LogoProps) => {
   const router = useRouter()
-  const goToHome = () => {
-    onClose && onClose()
+  const goToHome = useCallback(() => {
     router.push('/')
-  }
+    onClose?.()
+  }, [router, onClose])
+
   return (
     <>
       <Link className={className} onClick={goToHome} href="/">

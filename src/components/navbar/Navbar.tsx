@@ -31,7 +31,7 @@ export default function Navbar() {
   const btnRef = useRef(null)
   return (
     <>
-      <Container className='text-white bg-black neon-purple z-10 fixed top-0 w-full flex items-center justify-between' >
+      <Container className='text-white bg-slate-800 shadow-custom z-10 border-b border-b-white fixed top-0 w-full flex items-center justify-between' >
         <Logo className='py-6' />
         <Flex className='items-center hidden md:flex'>
           {menuItems.map((item, i) => (
@@ -43,7 +43,7 @@ export default function Navbar() {
           ))}
           <CustomButton className='ml-12 hover:bg-slate-400 hover:font-semibold' title='Connect Wallet' bgColor='colorNavBtn' shadow textColor='black' />
         </Flex>
-        <Button size='sm' colorScheme='black' className=' shadow-neon md:hidden'>
+        <Button size='sm' className=' bg-gradient-to-br from-purple-800 to-yellow-700 text-white hover:bg-gradient-to-tr hover:from-emerald-600 hover:to-yellow-800 transition-all duration-300 shadow-custom md:hidden'>
           <AiOutlineMenu ref={btnRef} onClick={onOpen} size={24} />
         </Button>
       </Container>
@@ -58,7 +58,7 @@ export default function Navbar() {
           finalFocusRef={btnRef}
         >
           <DrawerOverlay />
-          <DrawerContent bg='black' className=' text-white'>
+          <DrawerContent bg='gray.800' className=' text-white'>
             <DrawerCloseButton />
             <DrawerHeader className='neon-purple py-6'>
               <Logo onClose={onClose} />
