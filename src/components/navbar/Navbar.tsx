@@ -3,7 +3,7 @@ import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, useDisc
 import Container from '../Container';
 import Logo from '../Logo';
 import { useRef } from 'react';
-import { AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import Link from 'next/link';
 import CustomButton from '../CustomButton';
 import { usePathname } from 'next/navigation';
@@ -31,7 +31,7 @@ export default function Navbar() {
   const btnRef = useRef(null)
   return (
     <>
-      <Container className='text-white bg-slate-800 shadow-custom z-10 border-b border-b-white fixed top-0 w-full flex items-center justify-between' >
+      <Container className='text-white bg-gradient-to-r from-slate-700 to-slate-800 via-slate-500 shadow-custom z-10 border-b border-b-white fixed top-0 w-full flex items-center justify-between' >
         <Logo className='py-6' />
         <Flex className='items-center hidden md:flex'>
           {menuItems.map((item, i) => (
@@ -43,7 +43,7 @@ export default function Navbar() {
           ))}
           <CustomButton className='ml-12 hover:bg-slate-400 hover:font-semibold' title='Connect Wallet' bgColor='colorNavBtn' shadow textColor='black' />
         </Flex>
-        <Button size='sm' className=' bg-gradient-to-br from-purple-800 to-yellow-700 text-white hover:bg-gradient-to-tr hover:from-emerald-600 hover:to-yellow-800 transition-all duration-300 shadow-custom md:hidden'>
+        <Button size='sm' className='btn__nav md:hidden'>
           <AiOutlineMenu ref={btnRef} onClick={onOpen} size={24} />
         </Button>
       </Container>
@@ -59,16 +59,19 @@ export default function Navbar() {
         >
           <DrawerOverlay />
           <DrawerContent bg='gray.800' className=' text-white'>
-            <DrawerCloseButton />
-            <DrawerHeader className='neon-purple py-6'>
+            <DrawerHeader className=' bg-gradient-to-r from-slate-700 to-slate-800 via-slate-500 shadow-custom border-b flex items-center justify-between border-b-white py-[1.11rem]'>
               <Logo onClose={onClose} />
+              <Button onClick={onClose} size='sm' className='btn__nav'>
+
+                <AiOutlineClose size={24} />
+              </Button>
             </DrawerHeader>
 
             <DrawerBody mt={16}>
               <Stack spacing={6}>
                 {menuItems.map((item, i) => (
-                  <Link onClick={onClose} className={classNames(`transition-all duration-300 hover:bg-gray-500 px-6 py-4 rounded-md`, {
-                    'bg-gray-500 font-semibold': pathname === item.href
+                  <Link onClick={onClose} className={classNames(`transition-all duration-300 hover:bg-gray-700 px-6 py-4 rounded-md`, {
+                    ' bg-gradient-to-tr from-slate-700 to-slate-800 via-slate-600 font-semibold': pathname === item.href
                   })} key={i} href={item.href}>
                     {item.name}
                   </Link>
@@ -76,7 +79,7 @@ export default function Navbar() {
               </Stack>
             </DrawerBody>
             <DrawerFooter>
-              <CustomButton title='Connect Wallet' bgColor='colorNavBtn' shadow textColor='black' className=' mb-8 w-full' />
+              <CustomButton title='Connect Wallet' bgColor='colorNavBtn' shadow textColor='black' className=' py-[1.6rem] mb-8 w-full' />
             </DrawerFooter>
           </DrawerContent>
         </Drawer>

@@ -11,6 +11,8 @@ module.exports = {
       boxShadow: {
         custom: '0 15px 35px rgba(0, 0, 0, 0.2)',
         neon: "0 15px 35px rgba(255, 255, 255, 0.2), 0 0 5px theme('colors.purple.200'), 0 0 20px theme('colors.purple.700')",
+        inside:
+          '0 -2px 0 hsla(0, 0%, 100%, .15),  inset 0 2px 2px hsla(0, 0%, 0%, .1)',
       },
     },
     screens: {

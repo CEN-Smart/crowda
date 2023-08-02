@@ -38,10 +38,10 @@ export default function HomePage() {
       </Container>
       <GridContent className='py-16 bg-slate-800 text-zinc-300' mainH='Why Malaika?' mainT={`Malaika Empowering creators, rewarding backers. A blockchain-powered crowdfunding platform where creators break free from limits, and backers earn tokens for meaningful support. Together, we ignite innovation and make a difference`} priH='Empowering Dreams' priT={`Malaika offers a platform where creators can showcase their innovative ideas, passion projects, and social causes, enabling them to raise funds and turn their dreams into reality`} secH='Blockchain Security' secT={`With Malaika built on the blockchain, both creators and backers benefits from enhanced security and transparency. Smart contracts ensure that funds are securely managed, and backers can trust in the authenticity of projects`} terH='Rewards and Impact' terT={`Backers on Malaika not only support meaningful projects but also receive rewards in returns, making their contributions even more fulfilling. Join Malaika to be a part of a positive impact on the projects and causes you care about`} />
 
-      <Container className='bg-black text-black p-10'>
-        <CustomHeading className=' bg-gradient-to-tr from-purple-500 to-emerald-400 via-yellow-300 py-8 mx-auto rounded-md shadow-custom'
+      <Container className='bg-slate-700 text-white p-10'>
+        <CustomHeading className='py-8 shadow-custom bg-slate-800 mx-auto rounded-md'
           secondaryHeading='With Malaika'
-          primaryHeading='Boost Your Impact' description='As a backer, you can earn rewards for helping to fund projects. Support the projects you believe in and get rewarded for it!' leftButton='Create a project' rightButton='Support a project' rightBtnTextColor='black' leftBtnBgColor='black' rightBtnClassName='hover:font-semibold'
+          primaryHeading='Boost Your Impact' description='As a backer, you can earn rewards for helping to fund projects. Support the projects you believe in and get rewarded for it!' leftButton='Create a project' rightButton='Support a project' rightBtnTextColor='white' leftBtnBgColor='black' rightBtnClassName='hover:font-semibold'
           leftBtnClassName='hover:font-semibold' />
       </Container>
       <ScrollToTopButton />
