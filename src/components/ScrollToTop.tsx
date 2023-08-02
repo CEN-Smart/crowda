@@ -31,7 +31,7 @@ export default function ScrollToTopButton() {
 
   return (
     <motion.button
-      className="fixed bottom-4 right-2 text-slate-50 p-3 rounded-full bg-gradient-to-tr from-emerald-600 to-yellow-600 shadow-lg"
+      className="fixed bottom-4 right-2 p-3 rounded-full btn__nav"
       variants={ScrollToTopContainerVariants}
       initial="hide"
       animate={controls}
