@@ -43,8 +43,8 @@ export default function Navbar() {
           ))}
           <CustomButton className='ml-12 hover:bg-slate-400 hover:font-semibold' title='Connect Wallet' bgColor='colorNavBtn' shadow textColor='black' />
         </Flex>
-        <Button size='sm' className='btn__nav md:hidden'>
-          <AiOutlineMenu ref={btnRef} onClick={onOpen} size={24} />
+        <Button ref={btnRef} onClick={onOpen} size='sm' className='btn__nav md:hidden'>
+          <AiOutlineMenu size={24} />
         </Button>
       </Container>
 
