@@ -11,7 +11,7 @@ import ScrollToTopButton from '@/components/ScrollToTop';
 export default function HomePage() {
   return (
     <>
-      <CustomHeading className='bg-slate-800 pt-[7.5rem] text-white' primaryHeading='Unleash the Power of Your Purpose: Crowdfund with Crowda!' description='The Blockchain Powered Crowdfunding Platform that Rewards Backers and Fuels Dreams' leftButton='Create a project' rightButton='Support a project' leftColorScheme='yellow' rightBtnTextColor='white' rightBtnClassName='hover:font-semibold'
+      <CustomHeading className='bg-slate-800 pt-[7.5rem] text-white' primaryHeading='Unleash the Power of Your Purpose: Crowdfund with Crowda!' description='The Blockchain Powered Crowdfunding Platform that Rewards Backers and Fuels Dreams' leftButton='Create a project' rightButton='Support a project' leftBtnBgColor='black' leftBtnTextColor='white' rightBtnTextColor='white' rightBtnClassName='hover:font-semibold'
         leftBtnClassName='hover:font-semibold'
       />
 
