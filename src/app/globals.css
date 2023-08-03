@@ -4,6 +4,6 @@
 
 @layer components {
   .btn__nav {
-    @apply bg-gradient-to-br from-slate-300 to-slate-200 via-slate-600 text-slate-800 font-medium hover:bg-gradient-to-tr hover:from-slate-400 hover:to-slate-300 hover:via-slate-500 transition-all duration-300 shadow-custom;
+    @apply bg-slate-700 text-slate-100 font-medium hover:bg-slate-950 transition-all duration-300 shadow-custom;
   }
 }

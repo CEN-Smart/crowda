@@ -31,11 +31,11 @@ export default function Navbar() {
   const btnRef = useRef(null)
   return (
     <>
-      <Container className='text-white bg-gradient-to-r from-slate-700 to-slate-800 via-slate-500 shadow-custom z-10 border-b border-b-white fixed top-0 w-full flex items-center justify-between' >
+      <Container className='text-black bg-white shadow-custom z-10 border-b border-b-black fixed top-0 w-full flex items-center justify-between' >
         <Logo className='py-6' />
         <Flex className='items-center hidden md:flex'>
           {menuItems.map((item, i) => (
-            <Link className={classNames(`transition-all duration-150 py-6 hover:border-l hover:border-t hover:border-r hover:border-b border-b-black hover:font-semibold hover:border-b-black ml-1 px-8`, {
+            <Link className={classNames(`transition-all duration-150 py-6 hover:border hover:border-black hover:font-semibold ml-1 px-8`, {
               'border-t border-r border-l font-semibold': pathname === item.href
             })} key={i} href={item.href}>
               {item.name}
@@ -58,8 +58,8 @@ export default function Navbar() {
           finalFocusRef={btnRef}
         >
           <DrawerOverlay />
-          <DrawerContent bg='gray.800' className=' text-white'>
-            <DrawerHeader className=' bg-gradient-to-r from-slate-700 to-slate-800 via-slate-500 shadow-custom border-b flex items-center justify-between border-b-white py-[1.11rem]'>
+          <DrawerContent bg='white' className=' text-black'>
+            <DrawerHeader className='shadow-custom border-b flex items-center justify-between border-b-black py-[1.12rem]'>
               <Logo onClose={onClose} />
               <Button onClick={onClose} size='sm' className='btn__nav'>
 
@@ -70,8 +70,8 @@ export default function Navbar() {
             <DrawerBody mt={16}>
               <Stack spacing={6}>
                 {menuItems.map((item, i) => (
-                  <Link onClick={onClose} className={classNames(`transition-all duration-300 hover:bg-gray-700 px-6 py-4 rounded-md`, {
-                    ' bg-gradient-to-tr from-slate-700 to-slate-800 via-slate-600 font-semibold': pathname === item.href
+                  <Link onClick={onClose} className={classNames(`transition-all duration-300 hover:font-semibold hover:bg-gray-200 px-6 py-4 rounded-md`, {
+                    ' bg-gray-200 font-semibold': pathname === item.href
                   })} key={i} href={item.href}>
                     {item.name}
                   </Link>

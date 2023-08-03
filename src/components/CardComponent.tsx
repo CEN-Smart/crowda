@@ -15,7 +15,7 @@ export default function CardComponent() {
         }}
         variant='outline'
         p={4}
-        className={`gap-4 even:my-11 shadow-custom pt-8 bg-gradient-to-br from-zinc-100 to-zinc-200 via-slate-400 text-slate-800`}
+        className={`gap-4 even:my-11 shadow-custom pt-8 bg-white text-slate-800`}
       >
         <Image className='w-full lg:w-auto object-cover' src={cardImg} width={300} height={300} alt='Card Image' />
         <Stack>

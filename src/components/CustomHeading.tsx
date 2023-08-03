@@ -4,6 +4,8 @@ import { Box, ButtonGroup, Flex, Heading, Stack, Text } from '@chakra-ui/react';
 import classNames from 'classnames';
 import CustomButton from './CustomButton';
 import Container from './Container';
+import { useRouter } from 'next/navigation';
+import { useCallback } from 'react';
 
 interface Props {
   primaryHeading: string,
@@ -28,7 +30,18 @@ interface Props {
 
 }
 
+
+
+
+
 export default function CustomHeading({ primaryHeading, secondaryHeading, description, leftButton, rightButton, leftBtnClassName, rightBtnClassName, leftColorScheme, rightColorScheme, leftBtnTextColor, rightBtnTextColor, leftBtnBgColor, rightBtnBgColor, className }: Props) {
+
+  const router = useRouter()
+
+  const routeHandler = useCallback((route: string) => {
+    router.push(route)
+  }, [router])
+
   return (
     <>
       <Container className={classNames(` text-center pb-10 ${className}`)}>
@@ -60,9 +73,13 @@ export default function CustomHeading({ primaryHeading, secondaryHeading, descri
             md: 'auto'
           }} className='mx-auto'>
             {/* Left Button */}
-            <CustomButton className={leftBtnClassName} colorScheme={leftColorScheme} title={leftButton} shadow textColor={leftBtnTextColor} border bgColor={leftBtnBgColor} />
+            <CustomButton onClick={
+              () => routeHandler('/create-project')
+            } className={leftBtnClassName} colorScheme={leftColorScheme} title={leftButton} shadow textColor={leftBtnTextColor} border bgColor={leftBtnBgColor} />
             {/* Right Button */}
-            <CustomButton className={rightBtnClassName} colorScheme={rightColorScheme} title={rightButton} shadow bgColor={rightBtnBgColor} textColor={rightBtnTextColor} border />
+            <CustomButton onClick={
+              () => routeHandler('/support-project')
+            } className={rightBtnClassName} colorScheme={rightColorScheme} title={rightButton} shadow bgColor={rightBtnBgColor} textColor={rightBtnTextColor} border />
           </ButtonGroup>
         </Stack>
       </Container>

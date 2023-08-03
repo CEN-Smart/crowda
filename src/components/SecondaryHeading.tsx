@@ -17,7 +17,7 @@ const SecondaryHeading = ({ number, heading, title, center, className }: Props) 
       } flexDir='column' gap={3}>
         <Heading className={className} >
           {number && number} {heading} </Heading>
-        <Text className='text-gray-100 text-sm'>
+        <Text className='text-gray-800 text-sm'>
           {title}
         </Text>
       </Flex>
