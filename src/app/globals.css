@@ -4,6 +4,6 @@
 
 @layer components {
   .btn__nav {
-    @apply bg-slate-700 text-slate-100 font-medium hover:bg-slate-950 transition-all duration-300 shadow-custom;
+    @apply shadow-button text-slate-800 bg-nav font-medium hover:bg-nav transition-all duration-300;
   }
 }

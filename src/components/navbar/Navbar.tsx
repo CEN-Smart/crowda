@@ -31,7 +31,7 @@ export default function Navbar() {
   const btnRef = useRef(null)
   return (
     <>
-      <Container className='text-black bg-white shadow-custom z-10 border-b border-b-black fixed top-0 w-full flex items-center justify-between' >
+      <Container className='text-black bg-nav shadow-custom z-10 border-b border-b-black fixed top-0 w-full flex items-center justify-between' >
         <Logo className='py-6' />
         <Flex className='items-center hidden md:flex'>
           {menuItems.map((item, i) => (
@@ -59,7 +59,7 @@ export default function Navbar() {
         >
           <DrawerOverlay />
           <DrawerContent bg='white' className=' text-black'>
-            <DrawerHeader className='shadow-custom border-b flex items-center justify-between border-b-black py-[1.12rem]'>
+            <DrawerHeader className='shadow-custom  bg-nav border-b flex items-center justify-between border-b-black py-[1.12rem]'>
               <Logo onClose={onClose} />
               <Button onClick={onClose} size='sm' className='btn__nav'>
 
@@ -70,7 +70,7 @@ export default function Navbar() {
             <DrawerBody mt={16}>
               <Stack spacing={6}>
                 {menuItems.map((item, i) => (
-                  <Link onClick={onClose} className={classNames(`transition-all duration-300 hover:font-semibold hover:bg-gray-200 px-6 py-4 rounded-md`, {
+                  <Link onClick={onClose} className={classNames(`transition-all duration-150 hover:font-semibold hover:bg-gray-200 px-6 py-4 rounded-md`, {
                     ' bg-gray-200 font-semibold': pathname === item.href
                   })} key={i} href={item.href}>
                     {item.name}

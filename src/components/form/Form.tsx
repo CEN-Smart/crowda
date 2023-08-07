@@ -38,6 +38,7 @@ const FormPage = () => {
                       {errors.name}
                     </FormErrorMessage>
                   </FormControl >
+                  {/* 2ND input */}
                   <FormControl isInvalid={!!errors.password && touched.password}>
                     <FormLabel htmlFor='password'>Password</FormLabel>
                     <Field as={Input} name='password' id='password' type='password' variant='filled' placeholder='Password' validate={(value: string) => {
