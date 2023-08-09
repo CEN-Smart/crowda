@@ -4,6 +4,9 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/navbar/Navbar'
 import Footer from '@/components/footer/Footer'
+import WalletConnect from '@/providers/walletconnect'
+
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,12 +25,15 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
       <body className={` ${inter.className} antialiased`}>
+        <WalletConnect/>
         <Providers>
-          <Navbar />
-          {children}
-          <Footer />
-        </Providers>
+            <Navbar />
+              {children}
+            <Footer />
+          </Providers>
       </body>
     </html>
   )
 }
+
+

@@ -8,6 +8,8 @@ import Link from 'next/link';
 import CustomButton from '../CustomButton';
 import { usePathname } from 'next/navigation';
 import classNames from 'classnames';
+import { useWeb3Modal } from '@web3modal/react'
+
 
 interface MenuItems {
   [key: string]: string
@@ -29,6 +31,8 @@ export default function Navbar() {
   const pathname = usePathname()
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = useRef(null)
+  const { open, close } = useWeb3Modal()
+
   return (
     <>
       <Container className='text-black bg-nav shadow-custom z-10 border-b border-b-black fixed top-0 w-full flex items-center justify-between' >
@@ -41,7 +45,7 @@ export default function Navbar() {
               {item.name}
             </Link>
           ))}
-          <CustomButton className='ml-12 hover:bg-slate-400 hover:font-semibold' title='Connect Wallet' bgColor='colorNavBtn' shadow textColor='black' />
+          <CustomButton className='ml-12 hover:bg-slate-400 hover:font-semibold' onClick={async()=>{await open()}} title='Connect Wallet' bgColor='colorNavBtn' shadow textColor='black' />
         </Flex>
         <Button ref={btnRef} onClick={onOpen} size='sm' className='btn__nav md:hidden'>
           <AiOutlineMenu size={24} />
