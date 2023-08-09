@@ -74,11 +74,11 @@ export default function CustomHeading({ primaryHeading, secondaryHeading, descri
           }} className='mx-auto'>
             {/* Left Button */}
             <CustomButton onClick={
-              () => routeHandler('/create-project')
+              () => routeHandler('/createproject')
             } className={leftBtnClassName} colorScheme={leftColorScheme} title={leftButton} shadow textColor={leftBtnTextColor} border bgColor={leftBtnBgColor} />
             {/* Right Button */}
             <CustomButton onClick={
-              () => routeHandler('/support-project')
+              () => routeHandler('/supportproject')
             } className={rightBtnClassName} colorScheme={rightColorScheme} title={rightButton} shadow bgColor={rightBtnBgColor} textColor={rightBtnTextColor} border />
           </ButtonGroup>
         </Stack>

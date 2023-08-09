@@ -3,6 +3,7 @@ import { Button } from '@chakra-ui/react';
 import { IconType } from 'react-icons';
 
 interface ButtonProps {
+  type?: 'button' | 'submit' | 'reset',
   title: string,
   bgColor?: string,
   border?: boolean,
@@ -15,10 +16,10 @@ interface ButtonProps {
   colorScheme?: string
 }
 
-export default function CustomButton({ title, bgColor, border, textColor, big, icon: Icon, onClick, shadow, className, colorScheme }: ButtonProps) {
+export default function CustomButton({ type, title, bgColor, border, textColor, big, icon: Icon, onClick, shadow, className, colorScheme }: ButtonProps) {
   return (
     <>
-      <Button onClick={onClick} fontWeight='normal'
+      <Button type={type} onClick={onClick} fontWeight='normal'
         border={border ? `1px solid ${textColor}` : 'none'}
         color={textColor}
         colorScheme={colorScheme ? colorScheme : ''}
