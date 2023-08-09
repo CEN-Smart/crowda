@@ -37,12 +37,18 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
       <body className={` ${inter.className} antialiased`}>
+      <WagmiConfig config={wagmiConfig}>
         <Providers>
-          <Navbar />
-          {children}
-          <Footer />
-        </Providers>
+            <Navbar />
+              {children}
+            <Footer />
+          </Providers>
+        </WagmiConfig>
+        <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
       </body>
     </html>
   )
 }
+
+        <HomePage />
+
