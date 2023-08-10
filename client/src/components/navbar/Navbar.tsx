@@ -8,7 +8,8 @@ import Link from 'next/link';
 import CustomButton from '../CustomButton';
 import { usePathname } from 'next/navigation';
 import classNames from 'classnames';
-import { useWeb3Modal } from '@web3modal/react'
+import { useWeb3Modal } from '@web3modal/react';
+
 
 
 interface MenuItems {
@@ -40,12 +41,12 @@ export default function Navbar() {
         <Flex className='items-center hidden md:flex'>
           {menuItems.map((item, i) => (
             <Link className={classNames(`transition-all duration-150 py-6 hover:border hover:border-black hover:font-semibold ml-1 px-8`, {
-              'border-t border-r border-l font-semibold': pathname === item.href
+              'border border-black font-semibold': pathname === item.href
             })} key={i} href={item.href}>
               {item.name}
             </Link>
           ))}
-          <CustomButton className='ml-12 hover:bg-slate-400 hover:font-semibold' onClick={async()=>{await open()}} title='Connect Wallet' bgColor='colorNavBtn' shadow textColor='black' />
+          <CustomButton className='ml-12 hover:bg-slate-400 hover:font-semibold' onClick={async () => { await open() }} title='Connect Wallet' bgColor='colorNavBtn' shadow textColor='black' />
         </Flex>
         <Button ref={btnRef} onClick={onOpen} size='sm' className='btn__nav md:hidden'>
           <AiOutlineMenu size={24} />

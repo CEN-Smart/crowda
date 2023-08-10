@@ -214,11 +214,13 @@ const FormPage = () => {
                       </FormControl >
                       <Text>Project photo/video</Text>
                       <Text mb={3}>A high quality photo is required</Text>
-                      <CustomButton onClick={onOpen} type='submit' className='hover:font-semibold' title='Upload' textColor='black' border />
+                      <CustomButton className='hover:font-semibold' title='Upload' textColor='black' border />
                     </Stack>
                   </Center>
                   {/* Next Button */}
-                  <CustomButton title='Next' bgColor='black' textColor='white' className='hover:font-semibold hover:bg-slate-900' />
+                  <CustomButton onClick={() => {
+                    isSubmitting ? null : onOpen()
+                  }} type='submit' title='Submit' bgColor='black' textColor='white' className='hover:font-semibold hover:bg-slate-900' />
                 </Stack>
               </Form>
 
