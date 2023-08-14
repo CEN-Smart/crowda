@@ -200,13 +200,7 @@ const FormPage = () => {
                           <Image className=' mx-auto' src={imgPlaceholder} alt='File upload Image' />
                         </FormLabel>
                         <VisuallyHidden>
-                          <Field as={Input} name='upload' id='upload' type='file' variant='outline' validate={(value: string) => {
-                            let error
-                            if (!value) {
-                              error = 'Please upload a file'
-                            }
-                            return error
-                          }} />
+                          <Field as={Input} name='upload' id='upload' type='file' />
                         </VisuallyHidden>
                         <FormErrorMessage>
                           {errors.upload}
