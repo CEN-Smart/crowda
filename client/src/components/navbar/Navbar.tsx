@@ -1,5 +1,5 @@
 'use client'
-import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, useDisclosure, Button, DrawerCloseButton, DrawerFooter, Hide, Flex, Stack } from '@chakra-ui/react';
+import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, useDisclosure, Button, DrawerFooter, Hide, Flex, Stack } from '@chakra-ui/react';
 import Container from '../Container';
 import Logo from '../Logo';
 import { useRef } from 'react';
@@ -8,7 +8,7 @@ import Link from 'next/link';
 import CustomButton from '../CustomButton';
 import { usePathname } from 'next/navigation';
 import classNames from 'classnames';
-import { useWeb3Modal } from '@web3modal/react';
+// import { useWeb3Modal } from '@web3modal/react';
 
 
 
@@ -32,7 +32,7 @@ export default function Navbar() {
   const pathname = usePathname()
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = useRef(null)
-  const { open, close } = useWeb3Modal()
+  // const { open, close } = useWeb3Modal()
 
   return (
     <>
