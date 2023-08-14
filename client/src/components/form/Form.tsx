@@ -202,9 +202,6 @@ const FormPage = () => {
                         <VisuallyHidden>
                           <Field as={Input} name='upload' id='upload' type='file' />
                         </VisuallyHidden>
-                        <FormErrorMessage>
-                          {errors.upload}
-                        </FormErrorMessage>
                       </FormControl >
                       <Text>Project photo/video</Text>
                       <Text mb={3}>A high quality photo is required</Text>
