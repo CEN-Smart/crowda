@@ -13,7 +13,7 @@ const footerMenuItems: FooterMenuItemsProps[] = [
   { name: 'Cookies Settings', href: '/cookies-settings' }
 ]
 
-import { Center, Flex, Stack, Text } from '@chakra-ui/react'
+import { Center, Flex, Text } from '@chakra-ui/react'
 import Container from '../Container'
 import Logo from '../Logo'
 import Link from 'next/link'
